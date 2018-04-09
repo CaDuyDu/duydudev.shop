@@ -94,8 +94,8 @@ class ProductController extends Controller
         $product->brand_id = $rq->brand;
         $product->category_id = $rq->category;
         $product->code = $rq->code;
-        $product->price = $rq->price;
-        $product->description = $rq->description; 
+        //$product->price = $rq->price;
+        //$product->description = $rq->description; 
         $product->save();
         if ($rq->hasFile('txtimg')) {
             $images = Product::find($id)->imagesDetail->where('is_thumbnail', '1')->first();
